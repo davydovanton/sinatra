@@ -1766,7 +1766,7 @@ module Sinatra
         servers = Array(server)
         servers.each do |server_name|
           begin
-            return Rack::Handler.get(server_name.to_s)
+            return Rack::Handler.get(server_name)
           rescue LoadError, NameError
           end
         end
